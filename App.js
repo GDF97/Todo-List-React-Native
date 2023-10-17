@@ -20,9 +20,9 @@ export default function App() {
   const [id, setId] = useState(0);
   let data = new Date();
   let day = data.getDate();
-  let mes = data.getMonth() < 10 ? "0" + data.getMonth() : data.getMonth();
+  let mes = data.getMonth() + 1;
   let ano = data.getFullYear();
-  let dataFormatada = day + "/" + mes + "/" + ano;
+  let dataFormatada = day + "/" + (mes < 10 ? "0" + mes : mes) + "/" + ano;
 
   const AddTodo = () => {
     if (task == "") return;
